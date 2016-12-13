@@ -1,9 +1,9 @@
 
 <!DOCTYPE html>
 <head>
-	<title>Creating a modal window with HTML5and JavaScript</title>
+	<title>Modal dialog with HTML5 and JQuery</title>
   <style>
-/* Modal Content */
+
 .modal-content {
     position: relative;
     background-color: #fefefe;
@@ -28,15 +28,16 @@
     to {top:0; opacity:1}
 }
 </style>
+</head>
 <body>
 <button id="show" onclick="dlgShow()">Open Modal Dialog</button> 
-<div id="modal-background" >
-  <div id="modal" class="modal-content">
-    <button id="exit" onclick="dlgClose()">Close</button> 
-    <h3>Hello World!</h3>
-    <p>This is a modal dialog created using HTML5 and JQuery!</p>
-  </div>
+
+<div id="modal" class="modal-content">
+  <button id="exit" onclick="dlgClose()">Close</button> 
+  <h3>Hello World!</h3>
+  <p>This is a modal dialog created using HTML5 and JQuery!</p>
 </div>
+
 <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
 <script>
 
