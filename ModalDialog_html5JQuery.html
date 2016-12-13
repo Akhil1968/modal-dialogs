@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<head>
+	<title>Creating a modal window with HTML5and JavaScript</title>
+  <style>
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+</style>
+<body>
+<button id="show" onclick="dlgShow()">Open Modal Dialog</button> 
+<div id="modal-background" >
+  <div id="modal" class="modal-content">
+    <button id="exit" onclick="dlgClose()">Close</button> 
+    <h3>Hello World!</h3>
+    <p>This is a modal dialog created using HTML5 and JQuery!</p>
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+<script>
+
+function dlgShow(){
+   $('#modal').show();
+   $('#show').hide();
+}
+
+function dlgClose(){
+   $('#modal').hide();
+   $('#show').show();
+}
+dlgClose();
+
+</script>
+</body>
+</html>

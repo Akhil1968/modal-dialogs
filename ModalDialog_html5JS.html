@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<head>
+	<title>Creating a modal window with HTML5and JavaScript</title>
+<body>
+
+<dialog id="window">
+  <h3>Hello World!</h3>
+  <p>This is a modal dialog created using HTML5 and JavaScript!</p>
+  <button id="exit">Exit</button> <!--  onclick="dlgClose()" techniue 2 -->
+</dialog>
+<button id="show">Show Dialog</button> <!--  onclick="dlgShow()" techniue 2 -->
+
+<script>
+// Technique 1
+(function() {
+    var dialog = document.getElementById('window');
+  document.getElementById('show').onclick = function() {
+    dialog.show();
+  };
+  document.getElementById('exit').onclick = function() {
+    dialog.close();
+  };
+})();
+
+// Technique 2
+// function dlgShow(){
+//    var dialog = document.getElementById('window');
+//    dialog.show();
+// }
+
+// function dlgClose(){
+//    var dialog = document.getElementById('window');
+//    dialog.close();
+// }
+</script>
+</body>
+</html>
